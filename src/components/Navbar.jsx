@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigation = useNavigate()
   return (
     <div>
       <div className="max-lg:collapse bg-base-200 lg:mb-0 shadow-sm w-full rounded-md">
@@ -33,26 +35,16 @@ const Navbar = () => {
             <button className="btn btn-ghost text-xl">daisyUI</button>
           </div>
           <div className="navbar-center hidden lg:flex">
-            <ul className="menu menu-horizontal px-1">
-              <li>
-                <button>Item 1</button>
-              </li>
-              <li>
-                <details>
-                  <summary>Parent</summary>
-                  <ul className="p-2 bg-base-100 w-40 z-1">
-                    <li>
-                      <button>Submenu 1</button>
-                    </li>
-                    <li>
-                      <button>Submenu 2</button>
-                    </li>
-                  </ul>
-                </details>
-              </li>
-              <li>
-                <button>Item 3</button>
-              </li>
+            <ul className="menu menu-horizontal gap-9">
+              <li onClick={()=>{
+                navigation("/")
+              }}>Home</li>
+              <li onClick={()=>{
+                navigation("/about")
+              }}>About</li>
+              <li onClick={()=>{
+                navigation("/contact")
+              }}>Contact</li>
             </ul>
           </div>
           <div className="navbar-end">
@@ -67,22 +59,13 @@ const Navbar = () => {
         <div className="collapse-content lg:hidden z-1">
           <ul className="menu">
             <li>
-              <button>Item 1</button>
+              <button>Home</button>
             </li>
+
             <li>
-              <button>Parent</button>
-              <ul>
-                <li>
-                  <button>Submenu 1</button>
-                </li>
-                <li>
-                  <button>Submenu 2</button>
-                </li>
-              </ul>
+              <button>About</button>
             </li>
-            <li>
-              <button>Item 3</button>
-            </li>
+            <li>Contact</li>
           </ul>
         </div>
       </div>
