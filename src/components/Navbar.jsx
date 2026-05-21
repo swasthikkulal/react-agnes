@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-  const navigation = useNavigate()
+  const navigation = useNavigate();
   return (
     <div>
       <div className="max-lg:collapse bg-base-200 lg:mb-0 shadow-sm w-full rounded-md">
@@ -36,23 +36,45 @@ const Navbar = () => {
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal gap-9">
+              <li
+                onClick={() => {
+                  navigation("/");
+                }}
+              >
+                Home
+              </li>
+              <li
+                onClick={() => {
+                  navigation("/about");
+                }}
+              >
+                About
+              </li>
+              <li
+                onClick={() => {
+                  navigation("/contact");
+                }}
+              >
+                Contact
+              </li>
+              <li
+                onClick={() => {
+                  navigation("/state");
+                }}
+              >
+                State
+              </li>
+              <li
+                onClick={() => {
+                  navigation("/input");
+                }}
+              >
+                Input
+              </li>
               <li onClick={()=>{
-                navigation("/")
-              }}>Home</li>
-              <li onClick={()=>{
-                navigation("/about")
-              }}>About</li>
-              <li onClick={()=>{
-                navigation("/contact")
-              }}>Contact</li>
+                navigation("/toggle")
+              }}>Toggle</li>
             </ul>
-          </div>
-          <div className="navbar-end">
-            <input
-              type="text"
-              placeholder="Search"
-              className="input input-bordered w-64 lg:w-auto"
-            />
           </div>
         </div>
 
