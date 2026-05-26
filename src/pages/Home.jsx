@@ -6,7 +6,7 @@ import Card from "../components/Card";
 const Home = (props) => {
   return (
     <div>
-
+<Navbar/>
       <HeroSection />
       <div className=" w-full flex flex-wrap justify-center items-center gap-4">
         <Card />
