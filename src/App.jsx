@@ -11,6 +11,7 @@ import State from "./pages/State";
 import Input from "./pages/Input";
 import Toggle from "./pages/Toggle";
 import Effect from "./pages/Effect";
+import Form from "./pages/Form";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -26,6 +27,7 @@ function App() {
           <Route path="/input" element={<Input />} />
           <Route path="/toggle" element={<Toggle />} />
           <Route path="/effect" element={<Effect />} />
+          <Route path="/register" element={<Form />} />
         </Routes>
       </BrowserRouter>
     </div>
