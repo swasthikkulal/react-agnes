@@ -1,12 +1,14 @@
 import React from "react";
 import Navbar from "../components/Navbar";
+import Box from "./Box";
 
-const About = () => {
+const About = (props) => {
   return (
     <div>
       <Navbar />
 
-      <h1 className="text-9xl">About</h1>
+      <h1 className="text-9xl">{props.name}</h1>
+      <Box name={props.name} />
     </div>
   );
 };
